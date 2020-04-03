@@ -39,7 +39,7 @@ fi
 STDIN_FILE_DESCRIPTOR="0"
 [ -t "$STDIN_FILE_DESCRIPTOR" ] && STRAP_INTERACTIVE="1"
 
-# Set by web/app.rb
+# filled by the strep_generator.py webapp
 # STRAP_GIT_NAME=
 # STRAP_GIT_EMAIL=
 # STRAP_GITHUB_USER=
@@ -347,33 +347,6 @@ if [ -n "$STRAP_GITHUB_USER" ]; then
     logk
   fi
 fi
-
-# Clone Custom Footnote Syntax Highlighter
-# TODO: CleanUp
-# if [ -n "$STRAP_GITHUB_USER" ]; then
-#   DOTFILES_URL="https://github.com/$STRAP_GITHUB_USER/vscode-custom-footnote-syntax-highlighter"
-
-#   if git ls-remote "$DOTFILES_URL" &>/dev/null; then
-#     log "Fetching $STRAP_GITHUB_USER/vscode-custom-footnote-syntax-highlighter from GitHub:"
-#     if [ ! -d "$HOME/.vscode/extensions/vscode-custom-footnote-syntax-highlighter" ]; then
-#       log "Cloning to ~/.vscode/extensions/vscode-custom-footnote-syntax-highlighter:"
-#       if [ ! -d "$HOME/.vscode/extensions" ]; then
-#         mkdir -p ~/.vscode/extensions/
-#       fi
-#       git clone $Q "$DOTFILES_URL" ~/.vscode/extensions/vscode-custom-footnote-syntax-highlighter
-#     else
-#       (
-#         cd ~/.vscode/extensions/vscode-custom-footnote-syntax-highlighter
-#         git pull $Q --rebase --autostash
-#       )
-#     fi
-#     (
-#       cd ~/.vscode/extensions/vscode-custom-footnote-syntax-highlighter
-#       npm install
-#     )
-#     logk
-#   fi
-# fi
 
 # Setup Brewfile
 if [ -n "$STRAP_GITHUB_USER" ] && { [ ! -f "$HOME/.Brewfile" ] || [ "$HOME/.Brewfile" -ef "$HOME/.homebrew-brewfile/Brewfile" ]; }; then
