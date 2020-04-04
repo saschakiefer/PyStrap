@@ -6,8 +6,15 @@ def create_app(test_config=None):
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_mapping(SECRET_KEY="dev")
 
+    app.config.from_pyfile("config.py", silent=True)
+
     if test_config is None:
-        app.config.from_pyfile("config.py", silent=True)
+        app.config.from_pyfile("secrets.py", silent=True)
+
+        # Override if possible from env variables
+        app.config.from_envvar("GITHUB_CLIENT_ID", silent=True)
+        app.config.from_envvar("GITHUB_CLIENT_SECRET", silent=True)
+        app.config.from_envvar("APP_SECRET", silent=True)
 
     # ensure the instance folder exists
     try:
