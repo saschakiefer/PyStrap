@@ -62,8 +62,10 @@ db.sqlite3
 db.sqlite3-journal
 
 # Flask stuff:
-instance/
+instance/*
+!instance/config_template.py
 .webassets-cache
+
 
 # Scrapy stuff:
 .scrapy
@@ -165,5 +167,3 @@ Temporary Items
 !.vscode/launch.json
 !.vscode/extensions.json
 *.code-workspace
-
-instance/config.py
