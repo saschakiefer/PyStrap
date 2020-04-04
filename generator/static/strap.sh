@@ -208,7 +208,7 @@ logk
 # Set OSX Preferences - Borrowed from https://github.com/mathiasbynens/dotfiles/blob/master/.macos
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
-logon "Setting up MacOS Preferences:"
+logn "Setting up MacOS Preferences:"
 osascript -e 'tell application "System Preferences" to quit'
 
 
