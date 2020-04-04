@@ -2,6 +2,14 @@ from flask import Flask
 import os
 
 
+def set_config_from_env(app, name):
+    if name in os.environ:
+        app.config.from_mapping(name=os.environ[name])
+        print(name + " was set from environment variable")
+    else:
+        print(name + " was not found in the environment variables")
+
+
 def create_app(test_config=None):
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_mapping(SECRET_KEY="dev")
@@ -12,14 +20,9 @@ def create_app(test_config=None):
         app.config.from_pyfile("secrets.py", silent=True)
 
         # Override if possible from env variables
-        result = app.config.from_envvar("GITHUB_CLIENT_ID", silent=True)
-        print("Set GITHUB_CLIENT_ID: " + str(result))
-
-        result = app.config.from_envvar("GITHUB_CLIENT_SECRET", silent=True)
-        print("Set GITHUB_CLIENT_SECRET: " + str(result))
-
-        result = app.config.from_envvar("APP_SECRET", silent=True)
-        print("Set APP_SECRET: " + str(result))
+        set_config_from_env(app, "GITHUB_CLIENT_ID")
+        set_config_from_env(app, "GITHUB_CLIENT_SECRET")
+        set_config_from_env(app, "APP_SECRET")
 
     # ensure the instance folder exists
     try:
