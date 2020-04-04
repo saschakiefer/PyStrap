@@ -47,7 +47,7 @@ def strap():
     # remove to user data from the session
     user_data = session["user_data"]
 
-    with open("./script-generator/static/strap.sh") as f:
+    with open("./generator/static/strap.sh") as f:
         script_data = f.read()
 
     # Fill some data
