@@ -13,13 +13,13 @@ def create_app(test_config=None):
 
         # Override if possible from env variables
         result = app.config.from_envvar("GITHUB_CLIENT_ID", silent=True)
-        print("Set GITHUB_CLIENT_ID:" + result)
+        print("Set GITHUB_CLIENT_ID: " + str(result))
 
         result = app.config.from_envvar("GITHUB_CLIENT_SECRET", silent=True)
-        print("Set GITHUB_CLIENT_SECRET:" + result)
+        print("Set GITHUB_CLIENT_SECRET: " + str(result))
 
         result = app.config.from_envvar("APP_SECRET", silent=True)
-        print("Set APP_SECRET:" + result)
+        print("Set APP_SECRET: " + str(result))
 
     # ensure the instance folder exists
     try:
