@@ -1,0 +1,10 @@
+{
+    "python.pythonPath": "/Users/sascha/.local/share/virtualenvs/PyStrap-rCaMnF4r/bin/python",
+    "cSpell.ignoreWords": [
+        "from",
+        "jsonify",
+        "oauthlib",
+        "pyfile",
+        "requests"
+    ]
+}

@@ -23,13 +23,13 @@
       To Strap your system:
       <ol>
         <li>
-          <a href="/strap.sh">
+          <a href="{{ url_for('.strap') }}">
             <button type="button" class="btn btn-outline-primary btn-sm">
               Download the <code>strap.sh</code>
             </button>
           </a>
           that's been customised for your GitHub user (or
-          <a href="/strap.sh?text=1">view it</a>
+          <a href="{{ url_for('.strap') }}?text=1">view it</a>
           first). This will prompt for access to your email, public and private
           repositories; you'll need to provide access to any organizations whose
           repositories you need to be able to <code>git clone</code>. This is
@@ -42,10 +42,11 @@
         <li>
           If something failed, run Strap with more debugging output in
           Terminal.app with <code>bash ~/Downloads/strap.sh --debug</code> and
-          file an issue at <a href="{{ strap_issue_url }}">{{ strap_issue_url }}</a>
+          file an issue at
+          <a href="{{ strap_issue_url }}">{{ strap_issue_url }}</a>
         </li>
         <li>
-          Delete the customised <code>strap.sh</code> (it has a GitHub token in
+          Delete the customized <code>strap.sh</code> (it has a GitHub token in
           it) in Terminal.app with
           <code>rm -f ~/Downloads/strap.sh</code>
         </li>
@@ -56,9 +57,16 @@
       </ol>
     </div>
 
-    <a href="https://github.com/saschakiefer/strap">
+    <a href="https://github.com/saschakiefer/PyStrap">
       <img
-        style="position: absolute; top: 0; right: 0; border: 0; width: 149px; height: 149px;"
+        style="
+          position: absolute;
+          top: 0;
+          right: 0;
+          border: 0;
+          width: 149px;
+          height: 149px;
+        "
         src="//aral.github.com/fork-me-on-github-retina-ribbons/right-red@2x.png"
         alt="Fork me on GitHub"
       />
