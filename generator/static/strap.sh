@@ -83,7 +83,7 @@ escape() {
 }
 
 MACOS_VERSION="$(sw_vers -productVersion)"
-echo "$MACOS_VERSION" | grep $Q -E "^10.(9|10|11|12|13|14)" || {
+echo "$MACOS_VERSION" | grep $Q -E "^10.(9|10|11|12|13|14|15)" || {
   abort "Run Strap on macOS 10.9/10/11/12/13/14/15."
 }
 
