@@ -4,7 +4,7 @@ import os
 
 def set_config_from_env(app, name):
     if name in os.environ:
-        app.config.from_mapping(name=os.environ[name])
+        app.config[name] = os.environ[name]
         print(name + " was set from environment variable")
     else:
         print(name + " was not found in the environment variables")
