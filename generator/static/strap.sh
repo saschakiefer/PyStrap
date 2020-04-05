@@ -501,7 +501,7 @@ if [ -n "$STRAP_GITHUB_USER" ]; then
     fi
     (
       cd ~/git/workflow-support
-      git remote set-url origin git@github.com:$STRAP_GITHUB_USER/dotfiles.git
+      git remote set-url origin git@github.com:$STRAP_GITHUB_USER/workflow-support.git
       npm install
     )
     logk
@@ -553,10 +553,10 @@ fi
 
 # Install few global python packages
 logn "Installing global Python packages:"
-pip3 install --upgrade pip
-pip3 install --user pylint
-pip3 install --user flake8
-pip3 install --user black
+/usr/local/opt/python@3.8/bin/pip3 install --upgrade pip
+/usr/local/opt/python@3.8/bin/pip3 install --user pylint
+/usr/local/opt/python@3.8/bin/pip3 install --user flake8
+/usr/local/opt/python@3.8/bin/pip3 install --user black
 logk
 
 # Do some post processing to configure some of the installed stuff
