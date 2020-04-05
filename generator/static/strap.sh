@@ -99,8 +99,6 @@ defaults write com.apple.Safari \
 defaults write com.apple.Safari \
   com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaEnabledForLocalFiles \
   -bool false
-defaults write com.apple.screensaver askForPassword -int 1
-defaults write com.apple.screensaver askForPasswordDelay -int 0
 sudo defaults write /Library/Preferences/com.apple.alf globalstate -int 1
 sudo launchctl load /System/Library/LaunchDaemons/com.apple.alf.agent.plist 2>/dev/null
 
@@ -289,6 +287,10 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 # Use function F1, F, etc keys as standard function keys
 defaults write NSGlobalDomain com.apple.keyboard.fnState -bool true
 
+# KeyRepeat and Disable HoldEnabled
+defaults write -g ApplePressAndHoldEnabled -bool false
+defaults write -g InitialKeyRepeat -int 15
+defaults write -g KeyRepeat -int 2
 
 ### Screenshots / Screen                                                        #
 # Require password immediately after sleep or screen saver begins"
@@ -563,7 +565,7 @@ for i in script/do-postprocessing; do
     break
   fi
 done
-cd ~
 
+cd ~
 STRAP_SUCCESS="1"
 log "Your system is now Strap'd!"
