@@ -2,9 +2,18 @@
     "python.pythonPath": "/Users/sascha/.local/share/virtualenvs/PyStrap-rCaMnF4r/bin/python",
     "cSpell.ignoreWords": [
         "from",
+        "homebrew",
         "jsonify",
         "oauthlib",
         "pyfile",
         "requests"
+    ],
+    "spellright.language": [
+        "de",
+        "en"
+    ],
+    "spellright.documentTypes": [
+        "latex",
+        "plaintext"
     ]
 }
