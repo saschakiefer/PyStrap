@@ -475,6 +475,7 @@ if [ -n "$STRAP_GITHUB_USER" ]; then
           break
         fi
       done
+      git remote set-url origin git@github.com:$STRAP_GITHUB_USER/dotfiles.git
     )
     logk
   fi
@@ -500,6 +501,7 @@ if [ -n "$STRAP_GITHUB_USER" ]; then
     fi
     (
       cd ~/git/workflow-support
+      git remote set-url origin git@github.com:$STRAP_GITHUB_USER/dotfiles.git
       npm install
     )
     logk
