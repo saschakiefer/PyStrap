@@ -563,6 +563,7 @@ for i in script/do-postprocessing; do
     break
   fi
 done
+cd ~
 
 STRAP_SUCCESS="1"
 log "Your system is now Strap'd!"
