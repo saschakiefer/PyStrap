@@ -195,13 +195,6 @@ cd ~/Library/Fonts && { curl -O 'https://github.com/Falkor/dotfiles/blob/master/
 cd ~
 logk
 
-# Install few global python packages
-logn "Installing global Python packages:"
-pip3 install --upgrade pip
-pip3 install --user pylint
-pip3 install --user flake8
-pip3 install --user black
-logk
 
 # Set OSX Preferences - Borrowed from https://github.com/mathiasbynens/dotfiles/blob/master/.macos
 # Close any open System Preferences panes, to prevent them from overriding
@@ -555,6 +548,14 @@ if [ -n "$CUSTOM_BREW_COMMAND" ]; then
   brew "$CUSTOM_BREW_COMMAND"
   logk
 fi
+
+# Install few global python packages
+logn "Installing global Python packages:"
+pip3 install --upgrade pip
+pip3 install --user pylint
+pip3 install --user flake8
+pip3 install --user black
+logk
 
 # Do some post processing to configure some of the installed stuff
 cd ~/.dotfiles
