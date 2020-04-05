@@ -554,5 +554,15 @@ if [ -n "$CUSTOM_BREW_COMMAND" ]; then
   logk
 fi
 
+# Do some post processing to configure some of the installed stuff
+cd ~/.dotfiles
+for i in script/do-postprocessing; do
+  if [ -f "$i" ] && [ -x "$i" ]; then
+    log "Running postprocessor $i:"
+    "$i" 2>/dev/null
+    break
+  fi
+done
+
 STRAP_SUCCESS="1"
 log "Your system is now Strap'd!"
