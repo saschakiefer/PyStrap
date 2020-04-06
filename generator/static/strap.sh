@@ -557,6 +557,7 @@ logn "Installing global Python packages:"
 /usr/local/opt/python@3.8/bin/pip3 install --user pylint
 /usr/local/opt/python@3.8/bin/pip3 install --user flake8
 /usr/local/opt/python@3.8/bin/pip3 install --user black
+/usr/local/opt/python@3.8/bin/pip3 install --user pipenv
 logk
 
 # Do some post processing to configure some of the installed stuff
