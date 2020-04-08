@@ -223,11 +223,11 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 # Remove the auto-hiding Dock delay
 defaults write com.apple.dock autohide-delay -float 0
 
-# Automatically hide and show the Dock
+# Automatically hide and show the Docks
 defaults write com.apple.dock autohide -bool true
 
-# Only Show Open Applications In The Dock
-defaults write com.apple.dock static-only -bool true
+# Do NOT Only Show Open Applications In The Dock
+defaults write com.apple.dock static-only -bool false
 
 # Display full POSIX path as Finder window title
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
