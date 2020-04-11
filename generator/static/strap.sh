@@ -249,8 +249,8 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 
-# Minimize windows into their application’s icon
-defaults write com.apple.dock minimize-to-application -bool true
+# Do not minimize windows into their application’s icon
+defaults write com.apple.dock minimize-to-application -bool false
 
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
