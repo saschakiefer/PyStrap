@@ -43,6 +43,31 @@ Instead, to deploy to [Heroku](https://www.heroku.com) click:
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
+## Manual Post Processing Steps
+- [ ] Install iTerm2 Profile from `~/.dotfiles/app_config` directory
+- [ ] Install Karabiner Elements setup from `~/.dotfiles/app_config` directory
+- [ ] Install [shanalikhan/code-settings-sync: 🌴💪 Synchronize your Visual Studio Code Settings Across Multiple Machines using GitHub GIST 💪🌴](https://github.com/shanalikhan/code-settings-sync) and sync VSCode Settings
+- [ ] Install Setapp Software
+  - Aquarelo.app
+  - BusyCal.app
+  - CleanMyMac X.app
+  - Downie.app
+  - Expressions.app
+  - Folx.app
+  - Gemini.app
+  - Gitfox.app
+  - MacPilot.app
+  - One Switch.app
+  - Paw.app
+  - Permute.app
+  - PhotoBulk.app
+  - PixelSnap.app
+  - ProWritingAid.app
+  - SQLPro for SQLite.app
+  - Ulysses.app
+  - iStat Menus.app
+
+
 ## Web Application Configuration Environment Variables
 
 - `GITHUB_KEY`: the GitHub.com Application Client ID.
