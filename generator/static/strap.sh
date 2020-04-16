@@ -451,6 +451,11 @@ else
   logk
 fi
 
+# Install oh my zsh
+log "Installing OH MY ZSH"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+logk
+
 # Setup dotfiles
 if [ -n "$STRAP_GITHUB_USER" ]; then
   DOTFILES_URL="https://github.com/$STRAP_GITHUB_USER/dotfiles"
