@@ -452,8 +452,12 @@ else
 fi
 
 # Install oh my zsh
-log "Installing OH MY ZSH"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+if [ -d ~/.oh-my-zsh ]; then
+  log "My zsh is already installed"
+else
+  log "Installing OH MY ZSH"
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
 logk
 
 # Setup dotfiles
