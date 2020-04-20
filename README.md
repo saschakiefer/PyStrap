@@ -47,6 +47,9 @@ Instead, to deploy to [Heroku](https://www.heroku.com) click:
 
 - [ ] Install iTerm2 Profile from `~/.dotfiles/app_config` directory
 - [ ] Install Karabiner Elements setup from `~/.dotfiles/app_config` directory
+- [ ] Manually install Dracula Pro Theme
+- [ ] Manually install Code Block Plugin
+- [ ] Manually install Dank Mono Font
 - [ ] Install [shanalikhan/code-settings-sync: 🌴💪 Synchronize your Visual Studio Code Settings Across Multiple Machines using GitHub GIST 💪🌴](https://github.com/shanalikhan/code-settings-sync) and sync VSCode Settings
 - [ ] Install Setapp Software
   - Aquarelo.app
@@ -67,8 +70,6 @@ Instead, to deploy to [Heroku](https://www.heroku.com) click:
   - SQLPro for SQLite.app
   - Ulysses.app
   - iStat Menus.app
-- [ ] Manually install Dracula Pro Theme
-- [ ] Manually install Dank Mono Font
 
 ## Web Application Configuration Environment Variables
 
